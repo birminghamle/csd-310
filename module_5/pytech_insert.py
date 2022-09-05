@@ -19,7 +19,7 @@ client = MongoClient(url)
 db = client.pytech
 
 """ three student documents"""
-# Thorin Oakenshield's data document 
+# lathan Oakenshield's data document 
 lathan = {
     "student_id": "1007",
     "first_name": "Lathan",
@@ -49,7 +49,7 @@ lathan = {
 
 }
 
-# Bilbo Baggins data document 
+# bob Baggins data document 
 bob = {
     "student_id": "1008",
     "first_name": "Bob",
@@ -78,7 +78,7 @@ bob = {
     ]
 }
 
-# Frodo Baggins data document
+# alice data document
 alice = {
     "student_id": "1009",
     "first_name": "Alice",
@@ -112,14 +112,14 @@ students = db.students
 
 # insert statements with output 
 print("\n  -- INSERT STATEMENTS --")
-thorin_student_id = students.insert_one(thorin).inserted_id
-print("  Inserted student record Thorin Oakenshield into the students collection with document_id " + str(thorin_student_id))
+lathan_student_id = students.insert_one(lathan).inserted_id
+print("  Inserted student record  into the students collection with document_id " + str(lathan_student_id))
 
-bilbo_student_id = students.insert_one(bilbo).inserted_id
-print("  Inserted student record Bilbo Baggins into the students collection with document_id " + str(bilbo_student_id))
+bob_student_id = students.insert_one(bob).inserted_id
+print("  Inserted student record Bilbo Baggins into the students collection with document_id " + str(bob_student_id))
 
-frodo_student_id = students.insert_one(frodo).inserted_id
-print("  Inserted student record Frodo Baggins into the students collection with document_id " + str(frodo_student_id))
+alice_student_id = students.insert_one(alice).inserted_id
+print("  Inserted student record Frodo Baggins into the students collection with document_id " + str(alice_student_id))
 
 input("\n\n  End of program, press any key to exit... ")
 
