@@ -1,7 +1,7 @@
 """ 
     Title: pytech_queries.py
-    Author: Professor Krasso
-    Date: 10 July 2020
+    Author: Lathan Birmingham
+    Date: 5 September 2022
     Description: Test program for querying the students collection.
 """
 
@@ -31,11 +31,17 @@ for doc in student_list:
     print("  Student ID: " + doc["student_id"] + "\n  First Name: " + doc["first_name"] + "\n  Last Name: " + doc["last_name"] + "\n")
 
 # find document by student_id
-bilbo = students.find_one({"student_id": "1008"})
+lathan = students.find_one({"student_id": "1007"})
+bob = students.find_one({"student_id": "1008"})
+alice = students.find_one({"student_id": "1009"})
 
 # output the results 
 print("\n  -- DISPLAYING STUDENT DOCUMENT FROM find_one() QUERY --")
-print("  Student ID: " + bilbo["student_id"] + "\n  First Name: " + bilbo["first_name"] + "\n  Last Name: " + bilbo["last_name"] + "\n")
+print("  Student ID: " + lathan["student_id"] + "\n  First Name: " + lathan["first_name"] + "\n  Last Name: " + lathan["last_name"] + "\n")
+print("  Student ID: " + bob["student_id"] + "\n  First Name: " + bob["first_name"] + "\n  Last Name: " + bob["last_name"] + "\n")
+print("  Student ID: " + alice["student_id"] + "\n  First Name: " + alice["first_name"] + "\n  Last Name: " + alice["last_name"] + "\n")
+
+
 
 # exit message 
 input("\n\n  End of program, press any key to continue...")
