@@ -10,7 +10,7 @@
 from pymongo import MongoClient
 
 # MongoDB connection string 
-url = "mongodb+srv://admin:<password>@cluster0.hccdu34.mongodb.net/test"
+url = "mongodb+srv://admin:admin@cluster0.hccdu34.mongodb.net/test"
 # connect to the MongoDB cluster 
 client = MongoClient(url)
 
