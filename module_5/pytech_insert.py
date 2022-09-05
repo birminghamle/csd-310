@@ -1,7 +1,7 @@
 """ 
     Title: pytech_insert.py
-    Author: Professor Krasso
-    Date: 10 July 2020
+    Author: Lathan Birmingham
+    Date: 4 September 2022
     Description: Test program for inserting new documents 
                  into the students collection 
 """
@@ -20,10 +20,10 @@ db = client.pytech
 
 """ three student documents"""
 # Thorin Oakenshield's data document 
-thorin = {
+lathan = {
     "student_id": "1007",
-    "first_name": "Thorin",
-    "last_name": "Oakenshield",
+    "first_name": "Lathan",
+    "last_name": "Birmingham",
     "enrollments": [
         {
             "term": "Session 2",
@@ -50,16 +50,16 @@ thorin = {
 }
 
 # Bilbo Baggins data document 
-bilbo = {
+bob = {
     "student_id": "1008",
-    "first_name": "Bilbo",
-    "last_name": "Baggins",
+    "first_name": "Bob",
+    "last_name": "Upsteam",
     "enrollments": [
         {
             "term": "Session 2",
-            "gpa": "3.52",
-            "start_date": "July 10, 2020",
-            "end_date": "September 14, 2020",
+            "gpa": "3.4",
+            "start_date": "July 10, 2022",
+            "end_date": "September 14, 2022",
             "courses": [
                 {
                     "course_id": "CSD310",
@@ -79,14 +79,14 @@ bilbo = {
 }
 
 # Frodo Baggins data document
-frodo = {
+alice = {
     "student_id": "1009",
-    "first_name": "Frodo",
-    "last_name": "Baggins",
+    "first_name": "Alice",
+    "last_name": "Featherstone",
     "enrollments": [
         {
             "term": "Session 2",
-            "gpa": "1.5",
+            "gpa": "3.2",
             "start_date": "July 10, 2020",
             "end_date": "September 14, 2020",
             "courses": [
@@ -122,3 +122,4 @@ frodo_student_id = students.insert_one(frodo).inserted_id
 print("  Inserted student record Frodo Baggins into the students collection with document_id " + str(frodo_student_id))
 
 input("\n\n  End of program, press any key to exit... ")
+
