@@ -1,7 +1,7 @@
 """ 
     Title: pytech_delete.py
-    Author: Professor Krasso
-    Date: 13 July 2020
+    Author: Lathan Birmingham
+    Date: 5 September 2022
     Description: Test program for deleting documents from the pytech collection
 """
 
