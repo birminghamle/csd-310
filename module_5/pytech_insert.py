@@ -18,7 +18,7 @@ client = MongoClient(url)
 db = client.pytech
 
 """ three student documents"""
-# lathan Oakenshield's data document 
+# lathan birmingham's data document 
 lathan = {
     "student_id": "1007",
     "first_name": "Lathan",
@@ -48,7 +48,7 @@ lathan = {
 
 }
 
-# bob Baggins data document 
+# bob upsteam data document 
 bob = {
     "student_id": "1008",
     "first_name": "Bob",
@@ -112,13 +112,13 @@ students = db.students
 # insert statements with output 
 print("\n  -- INSERT STATEMENTS --")
 lathan_student_id = students.insert_one(lathan).inserted_id
-print("  Inserted student record  into the students collection with document_id " + str(lathan_student_id))
+print("  Inserted student record Lathan Birmingham into the students collection with document_id " + str(lathan_student_id))
 
 bob_student_id = students.insert_one(bob).inserted_id
-print("  Inserted student record Bilbo Baggins into the students collection with document_id " + str(bob_student_id))
+print("  Inserted student record Bob Upsteam into the students collection with document_id " + str(bob_student_id))
 
 alice_student_id = students.insert_one(alice).inserted_id
-print("  Inserted student record Frodo Baggins into the students collection with document_id " + str(alice_student_id))
+print("  Inserted student record Alice Featherstone into the students collection with document_id " + str(alice_student_id))
 
 input("\n\n  End of program, press any key to exit... ")
 

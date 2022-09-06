@@ -1,7 +1,7 @@
 """ 
     Title: pytech_update.py
-    Author: Professor Krasso
-    Date: 10 July 2020
+    Author: Lathan Birmingham
+    Date: 5 September 2022
     Description: Test program for updating a document in the pytech collection
 """
 
@@ -9,7 +9,7 @@
 from pymongo import MongoClient
 
 # MongoDB connection string 
-url = "mongodb+srv://admin:<password>@cluster0.hccdu34.mongodb.net/test"
+url = "mongodb+srv://admin:admin@cluster0.hccdu34.mongodb.net/test"
 
 # connect to the MongoDB cluster 
 client = MongoClient(url)
