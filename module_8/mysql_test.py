@@ -1,7 +1,7 @@
 """ 
     Title: pysports_join_queries.py
-    Author: Professor Krasso
-    Date: 16 July 2020
+    Author: Lathan Birmingham
+    Date: 12 September 2022
     Description: Test program for joining the player and team tables
 """
 
@@ -12,7 +12,7 @@ from mysql.connector import errorcode
 """ database config object """
 config = {
     "user": "pysports_user",
-    "password": "MySQL8IsGreat!",
+    "password": "Serena12",
     "host": "127.0.0.1",
     "database": "pysports",
     "raise_on_warnings": True
@@ -32,10 +32,10 @@ except mysql.connector.Error as err:
     """ on error code """
 
     if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
-        print("  The supplied username or password are invalid")
+        print("The supplied username or password are invalid")
 
     elif err.errno == errorcode.ER_BAD_DB_ERROR:
-        print("  The specified database does not exist")
+        print("The specified database does not exist")
 
     else:
         print(err)
