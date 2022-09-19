@@ -1,7 +1,7 @@
 """ 
     Title: pysports_join_queries.py
-    Author: Professor Krasso
-    Date: 16 July 2020
+    Author: Lathan Birmingham
+    Date: 19 September 2022
     Description: Test program for joining the player and team tables
 """
 
@@ -12,7 +12,7 @@ from mysql.connector import errorcode
 """ database config object """
 config = {
     "user": "pysports_user",
-    "password": "MySQL8IsGreat!",
+    "password": "Serena12",
     "host": "127.0.0.1",
     "database": "pysports",
     "raise_on_warnings": True
