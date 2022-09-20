@@ -1,8 +1,8 @@
 /*
     Title: whatabook.init.sql
-    Author: Professor Krasso
-    Date: 16 July 2020
-    Description: WhatABook database initialization script.
+    Author: Lathan Birmingham
+    Date: 20 September 2022
+    Description: WhatABook database initialization.
 */
 
 -- drop test user if exists 
@@ -65,67 +65,67 @@ CREATE TABLE wishlist (
     insert store record 
 */
 INSERT INTO store(locale)
-    VALUES('1000 Galvin Rd S, Bellevue, NE 68005');
+    VALUES('3240 Wilkinson Blvd, Charlotte, North Carolina 28208');
 
 /*
     insert book records 
 */
 INSERT INTO book(book_name, author, details)
-    VALUES('The Return of the King', 'J.R.Tolkien', 'The third part of The Lord of the Rings');
+    VALUES('The Hunger Games', 'Suzanne Collins', 'The first part of The Hunger Games');
 
 INSERT INTO book(book_name, author, details)
-    VALUES('The Fellowship of the Ring', 'J.R.Tolkien', 'The first part of The Lord of the Rings');
+    VALUES('Catching Fire', 'Suzanne Collins', 'The second part of The Hunger Games');
 
 INSERT INTO book(book_name, author, details)
-    VALUES('The Two Towers', 'J.R.Tolkien', "The second part of The Lord of The Rings");
+    VALUES('Mockingjay', 'Suzanne Collins', "The third part of The Hunger Games");
 
 INSERT INTO book(book_name, author)
-    VALUES('The Hobbit or There and Back Again', 'J.R.Tolkien');
+    VALUES('The Ballad of Songbirds and Snakes', 'Suzanne Collins');
 
 INSERT INTO book(book_name, author)
-    VALUES('Dune: Deluxe Edition', 'Frank Herbert');
+    VALUES('The Art of War', 'Sun Tzu');
 
 INSERT INTO book(book_name, author)
-    VALUES("Charlotee's Web", 'E.B. White');
+    VALUES("Tao Te Ching", 'Lao Tzu');
 
 INSERT INTO book(book_name, author)
-    VALUES('The Great Gatsby', 'F. Scott Fitzgerald');
+    VALUES('The Book of Five Rings', 'Miyamoto Musashi');
 
 INSERT INTO book(book_name, author)
-    VALUES('The Lion, the Witch, and the Wardrobe', 'C.S. Lewis');
+    VALUES('Bhagavad Gita', 'Sage Vyasa');
 
 INSERT INTO book(book_name, author)
-    VALUES('The Catcher and the Rye', 'J.D. Salinger');
+    VALUES('The Tibetan Book of the Dead', 'Padmasambhava');
 
 /*
-    insert user
+    insert user records
 */ 
 INSERT INTO user(first_name, last_name) 
-    VALUES('Thorin', 'Oakenshield');
+    VALUES('Lathan', 'Birmingham');
 
 INSERT INTO user(first_name, last_name)
-    VALUES('Bilbo', 'Baggins');
+    VALUES('Kendell', 'Smith');
 
 INSERT INTO user(first_name, last_name)
-    VALUES('Frodo', 'Baggins');
+    VALUES('Benjamin', 'Miller');
 
 /*
     insert wishlist records 
 */
 INSERT INTO wishlist(user_id, book_id) 
     VALUES (
-        (SELECT user_id FROM user WHERE first_name = 'Thorin'), 
-        (SELECT book_id FROM book WHERE book_name = 'The Hobbit or There and Back Again')
+        (SELECT user_id FROM user WHERE first_name = 'Lathan'), 
+        (SELECT book_id FROM book WHERE book_name = 'The Hunger Games')
     );
 
 INSERT INTO wishlist(user_id, book_id)
     VALUES (
-        (SELECT user_id FROM user WHERE first_name = 'Bilbo'),
-        (SELECT book_id FROM book WHERE book_name = 'The Fellowship of the Ring')
+        (SELECT user_id FROM user WHERE first_name = 'Kendell'),
+        (SELECT book_id FROM book WHERE book_name = 'Tao Te Ching')
     );
 
 INSERT INTO wishlist(user_id, book_id)
     VALUES (
-        (SELECT user_id FROM user WHERE first_name = 'Frodo'),
-        (SELECT book_id FROM book WHERE book_name = 'The Return of the King')
+        (SELECT user_id FROM user WHERE first_name = 'Benjamin'),
+        (SELECT book_id FROM book WHERE book_name = 'The Tibetan Book of the Dead')
     );
