@@ -1,7 +1,7 @@
 """ 
     Title: what_a_book.py
-    Author: Professor Krasso
-    Date: 27 July 2020
+    Author: Lathan Birmingham
+    Date: 3 October 2022
     Description: WhatABook program; Console program that interfaces with a MySQL database
 """
 
@@ -20,12 +20,12 @@ config = {
 }
 
 def show_menu():
-    print("\n  -- Main Menu --")
+    print("\n-- Main Menu --\n")
 
-    print("    1. View Books\n    2. View Store Locations\n    3. My Account\n    4. Exit Program")
+    print("1. View Books\n2. View Store Locations\n3. My Account\n4. Exit Program")
 
     try:
-        choice = int(input('      <Example enter: 1 for book listing>: '))
+        choice = int(input('Enter a number to select option: '))
 
         return choice
     except ValueError:
@@ -206,5 +206,3 @@ except mysql.connector.Error as err:
 
 finally:
     """ close the connection to MySQL """
-
-    db.close()
